@@ -1,101 +1,329 @@
+import { ArrowRight } from "lucide-react";
+import { Button } from "./_components/ui/button";
 import Image from "next/image";
+import CardBodyMethod from "./_components/card-body-method";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    <>
+      <SectionBanner />
+      <SectionOurStructure />
+      <SectionAboutUs />
+      <SectionMethod />
+      <SectionBodyMethodd />
+      <SectionLocation />
+    </>
   );
 }
+
+const SectionBanner = () => {
+  return (
+    <section className="bg-[url('/banner-home-m.webp')] bg-center bg-cover bg-no-repeat h-[700px] sm:bg-[url('/banner-home-d.webp')]">
+      <div className="max-w-6xl mx-auto flex flex-col gap-5   px-4 py-10 h-full justify-end items-center md:items-start md:justify-center">
+        <div className="max-w-[600px] space-y-1">
+          <h1 className="font-semibold text-white text-4xl text-center md:text-start md:text-5xl">
+            Transforme seu corpo e sua vida
+          </h1>
+          <p className="text-gray-200 text-center md:text-start">
+            Emagreça em meses o quê você nunca conseguiu emagrecer em anos, e
+            nunca mais reganhe o peso perdido.
+          </p>
+        </div>
+        <a
+          className="w-full max-w-[320px] mx-auto md:mx-0"
+          href=""
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button className="w-full  bg-white rounded-3xl px-8 py-6 text-green-900 ">
+            Agende uma consulta <ArrowRight />{" "}
+          </Button>
+        </a>
+      </div>
+    </section>
+  );
+};
+
+const SectionOurStructure = () => {
+  return (
+    <section className="py-8 space-y-3">
+      <div className="flex px-4 flex-col items-center gap-5 md:px-0">
+        <div className="">
+          <p className="text-sm text-center text-black">Saiba mais</p>
+          <h2 className="text-[#151314] text-2xl font-semibold text-center">
+            Assista o vídeo até o final.
+          </h2>
+        </div>
+        <div className="flex w-full items-center gap-4">
+          <div className="w-[300px] hidden  rounded-r-md  h-[300px] bg-[#8A7A30] md:block"></div>
+          <iframe
+            className="bg-black border-0 px-4 w-full max-w-[1024px] min-h-[300px] md:min-h-[600px] rounded-md"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          ></iframe>
+          <div className="w-[300px] hidden  rounded-l-md  h-[300px] bg-[#8A7A30] md:block"></div>
+        </div>
+        <a
+          className="w-full md:max-w-[300px] md:mx-auto"
+          href=""
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button className="w-full bg-green-900 rounded-3xl px-8 py-6 text-white ">
+            Agende uma consulta <ArrowRight />{" "}
+          </Button>
+        </a>
+      </div>
+    </section>
+  );
+};
+
+const SectionAboutUs = () => {
+  return (
+    <section className="bg-white">
+      <div className="px-4 py-8 max-w-6xl mx-auto flex flex-col gap-5 items-center md:flex-row">
+        <div className="space-y-4 w-full">
+          <div>
+            <h3 className="text-black text-base">Quem Somos</h3>
+            <h2 className="text-green-900 font-semibold text-3xl">
+              Dr. André Carvalho: Ciência, Saúde e Estética em Harmonia
+            </h2>
+          </div>
+          <div className="space-y-3">
+            <p className="text-sm text-black">
+              Meu nome é Dr. André Carvalho, e desde os primeiros passos na
+              medicina, descobri uma paixão: transformar vidas por meio da
+              saúde. Percebi que para alcançar uma vida saudável, funcional e
+              cheia de vitalidade, é essencial investir na prevenção e em um
+              estilo de vida equilibrado. Por isso, dediquei minha formação a
+              oferecer os tratamentos mais modernos e eficazes em emagrecimento,
+              ganho de massa muscular, reposição hormonal e longevidade, sempre
+              com um olhar para a saúde e a estética como aliados inseparáveis.
+            </p>
+            <p className="text-sm text-black">
+              Sou médico, com pós-graduação em Nutrologia Esportiva pela
+              Faculdade BWS, Medicina do Exercício e do Esporte pela Academia
+              Brasileira de Medicina Funcional Integrativa, e em Tricologia,
+              áreas que me permitem tratar cada paciente de forma completa e
+              personalizada.
+            </p>
+            <p className="text-sm text-black">
+              Em apenas 3 anos de prática clínica, já atendi mais de 2.000
+              pacientes que buscavam resultados rápidos, duradouros e
+              sustentáveis. Nosso diferencial? Um atendimento exclusivo,
+              acolhedor e verdadeiramente transformador, que coloca você no
+              centro do processo.
+            </p>
+          </div>
+        </div>
+        <div className="w-full">
+          <Image src="/banner-about.webp" alt="" width={596} height={586} />
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const SectionMethod = () => {
+  return (
+    <section className="bg-[url('/banner-method.webp')] px-4 bg-cover bg-center bg-no-repeat min-h-[200px] py-10 md:py-20">
+      <div className="flex max-w-6xl mx-auto flex-col gap-8 items-center md:flex-row">
+        <div className="w-full space-y-3">
+          <div>
+            <h3 className="text-white text-base">O Método Pró-Corpo</h3>
+            <h2 className="text-white font-semibold text-3xl">
+              Pró-Corpo: A Ciência da Transformação Física
+            </h2>
+          </div>
+          <Image
+            src="/image-method.webp"
+            alt="imagem método"
+            width={639}
+            height={229}
+          />
+        </div>
+        <div className="space-y-3 w-full">
+          <p className="text-sm text-white">
+            O método pro-corpo é uma abordagem multidisciplinar focada na
+            mudança do estilo de vida.
+          </p>
+          <p className="text-sm text-white">
+            O paciente embarca nessa jornada e tem acompanhamento com médico,
+            nutricionista e preparador físico.
+          </p>
+          <p className="text-sm text-white">
+            Semanalmente o paciente vem até a clínica fazer o que há de mais
+            moderno em tratamentos injetáveis de emagrecimento e ganho de massa
+            muscular.
+          </p>
+          <p className="text-sm text-white">
+            Além disso, monitoramos a evolução semanal através de exame de
+            bioimpedância, dessa forma conseguimos entender de forma precisa
+            como está ganho de massa magra e a perda de gordura, e caso haja
+            necessidade fazemos ajustes estratégicos na semana para que o
+            paciente não perca resultados e avance.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const SectionBodyMethodd = () => {
+  return (
+    <section className="px-4 space-y-6 py-8">
+      <div className="max-w-5xl mx-auto">
+        <div className="w-full flex flex-row items-center space-y-3 gap-2 md:gap-5">
+          <div className="w-full">
+            <h2 className="text-green-900 font-semibold text-3xl">
+              O Método Pró-Corpo
+            </h2>
+            <p className="text-sm text-black">
+              Nosso método foi criado para oferecer resultados rápidos,
+              saudáveis e duradouros, combinando ciência, personalização e um
+              acompanhamento próximo e eficiente.
+            </p>
+          </div>
+          <div className="">
+            <Image
+              src="/circle-logo.png"
+              alt="logo elance"
+              width={230}
+              height={230}
+            />
+          </div>
+        </div>
+      </div>
+      <div className="bg-[url('/banner-body-method.webp')] bg-cover bg-center bg-no-repeat min-h-[900px]">
+        <div className="bg-white flex flex-col gap-10 items-start rounded-md max-w-5xl mx-auto p-4 md:p-8">
+          <CardBodyMethod
+            numberMethod="01."
+            title="Avaliação Integral"
+            description="Começamos com uma análise completa da sua saúde, incluindo exames laboratoriais, bioimpedância e uma conversa detalhada para entender seu estilo de vida, objetivos e desafios.
+"
+          />
+          <CardBodyMethod
+            numberMethod="02."
+            title="Plano Personalizado"
+            description="Com base na avaliação, elaboramos um plano exclusivo que integra:
+• Estratégias nutricionais sob medida, adaptadas ao seu metabolismo e objetivos, seja para perder gordura ou ganhar massa muscular.
+• Reposição hormonal inteligente, quando necessário, para otimizar seu metabolismo, aumentar a disposição e equilibrar sua saúde."
+          />
+          <CardBodyMethod
+            numberMethod="03."
+            title="Monitoramento Semanal"
+            description="Orientamos treinos eficazes que aceleram a queima de gordura, preservam sua massa muscular e maximizam os resultados de forma alinhada ao seu plano.
+"
+          />
+          <CardBodyMethod
+            numberMethod="04."
+            title="Monitoramento Semanal"
+            description="A cada semana, você passa por uma avaliação detalhada com a bioimpedância, que nos permite acompanhar de forma precisa sua composição corporal. Assim, conseguimos ajustar o plano constantemente, garantindo que você evolua mais rápido e sem perder tempo com estratégias que não funcionam."
+          />
+          <CardBodyMethod
+            numberMethod="05."
+            title="Monitoramento Semanal"
+            description="Resultados Visíveis e Sustentáveis: Ao monitorar sua evolução semanalmente e ajustar as estratégias conforme necessário, asseguramos que seus resultados sejam rápidos, duradouros e saudáveis. O foco não é apenas emagrecer, mas transformar seu corpo e sua saúde de forma completa."
+          />
+        </div>
+      </div>
+      <div className="bg-green-900  pb-20">
+        <div className="max-w-6xl flex items-end relative w-full">
+          <Image
+            src="/image-body-method.webp"
+            alt="image do Dr. Andre Carvalho atendendo um paciente"
+            width={1400}
+            height={520}
+            className="top-0 right-0"
+          />
+          <Image
+            src="/circle-logo-two.png"
+            alt="logo em em formato de circulo elancé"
+            width={0}
+            height={0}
+            sizes="100vh"
+            className="absolute w-full max-w-[80px] -bottom-10 right-10 lg:max-w-[200px] lg:right-0 xl:-right-10 lg:-bottom-20"
+          />
+        </div>
+        <div className="max-w-6xl mx-auto space-y-1 px-4 py-10">
+          <span className="text-white text-base">
+            Muito Além do Emagrecimento
+          </span>
+          <p className="text-white text-sm max-w-[500px]">
+            O Método Pró-Corpo é perfeito para quem busca não apenas
+            emagrecimento, mas também longevidade, vitalidade e um corpo
+            estético e saudável. É um método que respeita sua individualidade e
+            maximiza seus resultados.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const SectionLocation = () => {
+  return (
+    <section className="px-4 space-y-6 py-8">
+      <div className="max-w-6xl flex flex-col justify-between gap-5 items-start mx-auto md:items-center md:flex-row">
+        <h2 className="text-4xl max-w-[400px] w-full font-semibold text-green-900 md:text-6xl">
+          Conheça a Elancé
+        </h2>
+        <div className="space-y-3 max-w-[600px] w-full">
+          <p className="text-sm text-black">
+            Aqui, você encontra um espaço pensado para transformar sua
+            experiência de cuidado com o corpo e a saúde. Agende sua consulta e
+            descubra como podemos ajudá-lo a conquistar o corpo que você deseja,
+            de forma saudável, duradoura e com excelência.
+          </p>
+          <div className="flex gap-2 items-center">
+            <a href="" target="_blank" rel="noopener noreferrer">
+              <Image
+                src="/icone-face.svg"
+                alt="icone facebook"
+                width={20}
+                height={20}
+              />
+            </a>
+            <a href="" target="_blank" rel="noopener noreferrer">
+              <Image
+                src="/icone-insta.svg"
+                alt="icone instagram"
+                width={20}
+                height={20}
+              />
+            </a>
+            <div className="h-[20px] w-[2px] bg-green-900"></div>
+            <a
+              className="text-green-900 underline"
+              href="tel:11914850610"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              (11) 91485-0610
+            </a>
+          </div>
+        </div>
+      </div>
+      <div className="max-w-6xl flex flex-col justify-between gap-5 items-center mx-auto md:flex-row">
+        <a
+          className="w-full md:max-w-[300px] "
+          href=""
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button className="w-full bg-green-900 rounded-3xl px-8 py-6 text-white ">
+            Agende uma consulta <ArrowRight />{" "}
+          </Button>
+        </a>
+        <div className="space-y-3 max-w-[600px] w-full">
+          <h3 className="text-green-900 text-xl font-semibold">Endereço</h3>
+          <p className="text-sm text-black">
+            Nossa clínica está localizada no coração de Pinheiros, em São Paulo,
+            na Rua Pais Leme, 215, conjunto 315, Edifício Thera.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+};
