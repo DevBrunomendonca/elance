@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "./_components/header";
 import Footer from "./_components/footer";
+import IconWhatsApp from "./_components/icon-whatsapp";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -21,8 +22,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-br">
+    <html className="scroll-smooth" lang="pt-br">
       <body className={poppins.className}>
+        <IconWhatsApp />
         <Header />
         {children}
         <Footer />
