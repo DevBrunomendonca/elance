@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Phone } from "lucide-react";
 import { Button } from "./_components/ui/button";
 import Image from "next/image";
 import CardBodyMethod from "./_components/card-body-method";
@@ -310,15 +310,16 @@ const SectionLocation = () => {
                 width={20}
                 height={20}
               />{" "}
-              Meu instagram
+              Meu Instagram
             </a>
             <div className="hidden h-[20px] w-[2px] bg-green-900 sm:block"></div>
             <a
-              className="text-green-900 underline"
+              className="flex py-1 px-2 underline text-green-900 gap-1 border-[1px] border-green-900 rounded-md"
               href="tel:11914850610"
               target="_blank"
               rel="noopener noreferrer"
             >
+              <Phone size={20} />
               (11) 91485-0610
             </a>
           </div>
