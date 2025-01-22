@@ -58,15 +58,15 @@ const SectionOurStructure = () => {
           </h2>
         </div>
         <div className="flex w-full items-center gap-4">
-          <div className="w-[300px] hidden  rounded-r-md  h-[300px] bg-[#8A7A30] md:block"></div>
+          <div className="w-[300px] hidden rounded-r-md  h-[300px] bg-[#8A7A30] lg:block"></div>
           <iframe
-            className="border-0 px-4 w-full max-w-[1024px] min-h-[300px] md:min-h-[600px] rounded-md"
+            className="border-0 px-4 w-full max-w-[1024px] min-h-[300px] md:min-h-[600px] rounded-[30px]"
             title="YouTube video player"
             src="https://www.youtube.com/embed/wJrbQ-wid3k?si=hDX6dXbqu8HJhHHn"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
           ></iframe>
-          <div className="w-[300px] hidden  rounded-l-md  h-[300px] bg-[#8A7A30] md:block"></div>
+          <div className="w-[300px] hidden rounded-l-md  h-[300px] bg-[#8A7A30] lg:block"></div>
         </div>
         <a
           className="w-full md:max-w-[300px] md:mx-auto"
