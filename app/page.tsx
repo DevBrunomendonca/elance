@@ -58,15 +58,15 @@ const SectionOurStructure = () => {
           </h2>
         </div>
         <div className="flex w-full items-center gap-4">
-          <div className="w-[300px] hidden rounded-r-md  h-[300px] bg-[#8A7A30] lg:block"></div>
+          <div className="w-full hidden rounded-r-md  h-[300px] bg-[#8A7A30] lg:block"></div>
           <iframe
-            className="border-0 px-4 w-full max-w-[1024px] min-h-[300px] md:min-h-[600px] rounded-[30px]"
+            className="border-0 px-4 w-full  min-h-[300px] md:min-h-[600px] rounded-[30px] md:min-w-[800px] xl:min-w-[1200px]"
             title="YouTube video player"
             src="https://www.youtube.com/embed/wJrbQ-wid3k?si=hDX6dXbqu8HJhHHn"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
           ></iframe>
-          <div className="w-[300px] hidden rounded-l-md  h-[300px] bg-[#8A7A30] lg:block"></div>
+          <div className="w-full hidden rounded-l-md  h-[300px] bg-[#8A7A30] lg:block"></div>
         </div>
         <a
           className="w-full md:max-w-[300px] md:mx-auto"
@@ -283,32 +283,36 @@ const SectionLocation = () => {
             descubra como podemos ajudá-lo a conquistar o corpo que você deseja,
             de forma saudável, duradoura e com excelência.
           </p>
-          <div className="flex gap-2 items-center">
-            <a
-              href="https://www.facebook.com/andrecarvalhomedico/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                src="/icone-face.svg"
-                alt="icone facebook"
-                width={20}
-                height={20}
-              />
-            </a>
+          <div className="flex w-full flex-col gap-2 items-start sm:items-center sm:flex-row">
             <a
               href="https://www.instagram.com/clinica.elance/"
               target="_blank"
               rel="noopener noreferrer"
+              className="flex py-1 px-2 underline text-green-900 gap-1 border-[1px] border-green-900 rounded-md"
             >
               <Image
                 src="/icone-insta.svg"
                 alt="icone instagram"
                 width={20}
                 height={20}
-              />
+              />{" "}
+              Instagran Elancé
             </a>
-            <div className="h-[20px] w-[2px] bg-green-900"></div>
+            <a
+              href="https://www.instagram.com/andrecarvalhomedico/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex py-1 px-2 underline text-green-900 gap-1 border-[1px] border-green-900 rounded-md"
+            >
+              <Image
+                src="/icone-insta.svg"
+                alt="icone instagram"
+                width={20}
+                height={20}
+              />{" "}
+              Meu instagram
+            </a>
+            <div className="hidden h-[20px] w-[2px] bg-green-900 sm:block"></div>
             <a
               className="text-green-900 underline"
               href="tel:11914850610"
