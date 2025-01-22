@@ -296,7 +296,7 @@ const SectionLocation = () => {
                 width={20}
                 height={20}
               />{" "}
-              Instagran Elancé
+              Instagram Elancé
             </a>
             <a
               href="https://www.instagram.com/andrecarvalhomedico/"
