@@ -1,3 +1,5 @@
+"use client";
+
 import { AlignJustify, X } from "lucide-react";
 import { Button } from "./ui/button";
 import {
@@ -10,8 +12,27 @@ import {
   SheetTrigger,
 } from "./ui/sheet";
 import Logo from "./logo";
+import { useCallback, useEffect, useState } from "react";
 
 const Header = () => {
+  const [sheetIsOpen, setSheetIsOpen] = useState<boolean>(false);
+
+  const handleResize = useCallback(() => {
+    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+    window.innerWidth > 768 && setSheetIsOpen(false);
+  }, []);
+
+  useEffect(() => {
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.addEventListener("resize", handleResize);
+    };
+  }, [handleResize]);
+
+  const handleCloseSheet = () => {
+    setSheetIsOpen(false);
+  };
   return (
     <header
       style={{
@@ -25,23 +46,29 @@ const Header = () => {
 
         <nav className="md:flex hidden  max-w-6xl gap-3 mx-auto justify-center w-full">
           <ul className="flex items-center justify-center gap-5">
-            <li className="text-sm text-white cursor-pointer font-light">
-              Início
-            </li>
-            <li className="text-sm text-white cursor-pointer font-light">
-              Sobre o Dr. André
-            </li>
-            <li className="text-sm text-white cursor-pointer font-light">
-              O Método Pró-Corpo
-            </li>
-            <li className="text-sm text-white cursor-pointer font-light">
-              Agende Sua Consulta
-            </li>
+            <a href="#home">
+              <li className="text-sm text-white font-light">Início</li>
+            </a>
+            <a href="#about">
+              <li className="text-sm text-white cursor-pointer font-light">
+                Sobre o Dr. André
+              </li>
+            </a>
+            <a href="#method">
+              <li className="text-sm text-white cursor-pointer font-light">
+                O Método Pró-Corpo
+              </li>
+            </a>
+            <a href="#contact">
+              <li className="text-sm text-white cursor-pointer font-light">
+                Agende Sua Consulta
+              </li>
+            </a>
           </ul>
         </nav>
 
         <div className="block md:hidden">
-          <Sheet>
+          <Sheet open={sheetIsOpen} onOpenChange={setSheetIsOpen}>
             <SheetTrigger className="bg-black" asChild>
               <Button className="block md:hidden">
                 <AlignJustify color="#DBD5C7" />
@@ -53,7 +80,7 @@ const Header = () => {
                   <Logo />
                   <SheetClose asChild>
                     <Button>
-                      <X color="#DBD5C7" />
+                      <X onClick={handleCloseSheet} color="#DBD5C7" />
                     </Button>
                   </SheetClose>
                 </SheetTitle>
@@ -61,18 +88,26 @@ const Header = () => {
               <SheetFooter className="flex h-full flex-col gap-5">
                 <nav className="flex h-full flex-col  max-w-6xl gap-3 mx-auto justify-center w-full">
                   <ul className="flex h-full flex-col items-center justify-start pt-40 gap-8">
-                    <li className="text-white text-lg cursor-pointer font-medium">
-                      Início
-                    </li>
-                    <li className="text-white text-lg  cursor-pointer font-medium">
-                      Sobre o Dr. André
-                    </li>
-                    <li className=" text-white text-lg  cursor-pointer font-medium">
-                      O Método Pró-Corpo
-                    </li>
-                    <li className="text-white text-lg  cursor-pointer font-medium">
-                      Agende Sua Consulta
-                    </li>
+                    <a onClick={handleCloseSheet} href="#home">
+                      <li className="text-white text-lg cursor-pointer font-medium">
+                        Início
+                      </li>
+                    </a>
+                    <a onClick={handleCloseSheet} href="#about">
+                      <li className="text-white text-lg  cursor-pointer font-medium">
+                        Sobre o Dr. André
+                      </li>
+                    </a>
+                    <a onClick={handleCloseSheet} href="#method">
+                      <li className=" text-white text-lg  cursor-pointer font-medium">
+                        O Método Pró-Corpo
+                      </li>
+                    </a>
+                    <a onClick={handleCloseSheet} href="#contact">
+                      <li className="text-white text-lg  cursor-pointer font-medium">
+                        Agende Sua Consulta
+                      </li>
+                    </a>
                   </ul>
                 </nav>
               </SheetFooter>

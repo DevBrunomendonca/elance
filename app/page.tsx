@@ -18,7 +18,10 @@ export default function Home() {
 
 const SectionBanner = () => {
   return (
-    <section className="bg-[url('/banner-home-m.webp')] bg-center bg-cover bg-no-repeat h-[700px] sm:bg-[url('/banner-home-d.webp')]">
+    <section
+      id="home"
+      className="bg-[url('/banner-home-m.webp')] bg-center bg-cover bg-no-repeat h-[700px] sm:bg-[url('/banner-home-d.webp')]"
+    >
       <div className="max-w-6xl mx-auto flex flex-col gap-5   px-4 py-10 h-full justify-end items-center md:items-start md:justify-center">
         <div className="max-w-[600px] space-y-1">
           <h1 className="font-semibold text-white text-4xl text-center md:text-start md:text-5xl">
@@ -31,7 +34,7 @@ const SectionBanner = () => {
         </div>
         <a
           className="w-full max-w-[320px] mx-auto md:mx-0"
-          href=""
+          href="https://wa.me/5511914850610?text=Gostaria%20de%20agendar%20minha%20consulta%20na%20Cl%C3%ADnica%20Elanc%C3%A9...%20"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -57,8 +60,9 @@ const SectionOurStructure = () => {
         <div className="flex w-full items-center gap-4">
           <div className="w-[300px] hidden  rounded-r-md  h-[300px] bg-[#8A7A30] md:block"></div>
           <iframe
-            className="bg-black border-0 px-4 w-full max-w-[1024px] min-h-[300px] md:min-h-[600px] rounded-md"
+            className="border-0 px-4 w-full max-w-[1024px] min-h-[300px] md:min-h-[600px] rounded-md"
             title="YouTube video player"
+            src="https://www.youtube.com/embed/wJrbQ-wid3k?si=hDX6dXbqu8HJhHHn"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
           ></iframe>
@@ -66,7 +70,7 @@ const SectionOurStructure = () => {
         </div>
         <a
           className="w-full md:max-w-[300px] md:mx-auto"
-          href=""
+          href="https://wa.me/5511914850610?text=Gostaria%20de%20agendar%20minha%20consulta%20na%20Cl%C3%ADnica%20Elanc%C3%A9...%20"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -81,8 +85,8 @@ const SectionOurStructure = () => {
 
 const SectionAboutUs = () => {
   return (
-    <section className="bg-white">
-      <div className="px-4 py-8 max-w-6xl mx-auto flex flex-col gap-5 items-center md:flex-row">
+    <section id="about" className="bg-white px-4 py-[80px]">
+      <div className=" max-w-6xl mx-auto flex flex-col gap-5 items-center md:flex-row">
         <div className="space-y-4 w-full">
           <div>
             <h3 className="text-black text-base">Quem Somos</h3>
@@ -127,7 +131,10 @@ const SectionAboutUs = () => {
 
 const SectionMethod = () => {
   return (
-    <section className="bg-[url('/banner-method.webp')] px-4 bg-cover bg-center bg-no-repeat min-h-[200px] py-10 md:py-20">
+    <section
+      id="method"
+      className="bg-[url('/banner-method.webp')] px-4 bg-cover bg-center bg-no-repeat min-h-[200px] py-[80px]"
+    >
       <div className="flex max-w-6xl mx-auto flex-col gap-8 items-center md:flex-row">
         <div className="w-full space-y-3">
           <div>
@@ -172,7 +179,7 @@ const SectionMethod = () => {
 
 const SectionBodyMethodd = () => {
   return (
-    <section className="px-4 space-y-6 py-8">
+    <section className="px-4 space-y-6 pt-8">
       <div className="max-w-5xl mx-auto">
         <div className="w-full flex flex-row items-center space-y-3 gap-2 md:gap-5">
           <div className="w-full">
@@ -264,8 +271,8 @@ const SectionBodyMethodd = () => {
 
 const SectionLocation = () => {
   return (
-    <section className="px-4 space-y-6 py-8">
-      <div className="max-w-6xl flex flex-col justify-between gap-5 items-start mx-auto md:items-center md:flex-row">
+    <section id="contact" className=" space-y-6 pt-[80px]">
+      <div className="max-w-6xl px-4 flex flex-col justify-between gap-5 items-start mx-auto md:items-center md:flex-row">
         <h2 className="text-4xl max-w-[400px] w-full font-semibold text-green-900 md:text-6xl">
           Conheça a Elancé
         </h2>
@@ -277,7 +284,11 @@ const SectionLocation = () => {
             de forma saudável, duradoura e com excelência.
           </p>
           <div className="flex gap-2 items-center">
-            <a href="" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.facebook.com/andrecarvalhomedico/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Image
                 src="/icone-face.svg"
                 alt="icone facebook"
@@ -285,7 +296,11 @@ const SectionLocation = () => {
                 height={20}
               />
             </a>
-            <a href="" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.instagram.com/clinica.elance/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Image
                 src="/icone-insta.svg"
                 alt="icone instagram"
@@ -305,10 +320,10 @@ const SectionLocation = () => {
           </div>
         </div>
       </div>
-      <div className="max-w-6xl flex flex-col justify-between gap-5 items-center mx-auto md:flex-row">
+      <div className="max-w-6xl px-4 flex flex-col justify-between gap-5 items-center mx-auto md:flex-row">
         <a
           className="w-full md:max-w-[300px] "
-          href=""
+          href="https://wa.me/5511914850610?text=Gostaria%20de%20agendar%20minha%20consulta%20na%20Cl%C3%ADnica%20Elanc%C3%A9...%20"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -323,6 +338,15 @@ const SectionLocation = () => {
             na Rua Pais Leme, 215, conjunto 315, Edifício Thera.
           </p>
         </div>
+      </div>
+      <div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.9950628916067!2d-46.69846460000001!3d-23.568620799999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce518a37ead3e5%3A0x2b77563e55eef66!2sDr.%20Andr%C3%A9%20Carvalho!5e0!3m2!1spt-BR!2sbr!4v1737509007321!5m2!1spt-BR!2sbr"
+          className="w-full min-h-[400px] border-0"
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
       </div>
     </section>
   );
