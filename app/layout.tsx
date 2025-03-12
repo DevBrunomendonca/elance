@@ -15,6 +15,9 @@ export const metadata: Metadata = {
   title: "Elancé - Transforme seu corpo e sua vida",
   description:
     "Emagreça em meses o quê você nunca conseguiu emagrecer em anos, e nunca mais reganhe o peso perdido.",
+  icons: {
+    icon: "/favicom-elance.ico",
+  },
 };
 
 export default function RootLayout({
